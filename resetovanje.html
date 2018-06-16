@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-
 <head>
-    <title>Logovanje</title>
+    <title>Resetovanje</title>
     <style>
         #loader {
             transition: all .3s ease-in-out;
@@ -71,48 +70,20 @@
         });
     </script>
     <div class="peers ai-s fxw-nw h-100vh">
-        <div class="d-n@sm- peer peer-greed h-100 pos-r bgr-n bgpX-c bgpY-c bgsz-cv" style="background-image:url(assets/static/images/pocetna.jpg)">
-            
+        <div class="peer peer-greed h-100 pos-r bgr-n bgpX-c bgpY-c bgsz-cv" style="background-image:url(assets/static/images/pocetna.jpg)">
         </div>
         <div class="col-12 col-md-4 peer pX-40 pY-80 h-100 bgc-white scrollable pos-r" style="min-width:320px">
-            <h3 class="fw-300 c-grey-900 mB-40"><b>Smart Farm elektronska platforma</b></h3>
-            <form>
-                <div class="form-group">
-                    <label class="text-normal text-dark">Korisničko ime</label>
-                    <input type="email" class="form-control" placeholder="Vaše korisničko ime">
-                </div>
-                <div class="form-group">
-                    <label class="text-normal text-dark">Šifra</label>
-                    <input type="password" class="form-control" placeholder="Vaša šifra">
-                </div>
-                <div class="form-group">
-                    <div class="peers ai-c jc-sb fxw-nw">
-                        <div class="peer">
-                            <div class="checkbox checkbox-circle checkbox-info peers ai-c">
-                                <input type="checkbox" id="inputCall1" name="inputCheckboxesCall" class="peer">
-                                <label for="inputCall1" class="peers peer-greed js-sb ai-c"><span class="peer peer-greed">Zapamti me</span></label>
-                            </div>
-                        </div>
-                        <div class="peer">
-                            <button class="btn btn-primary">Uloguj se</button>
-							
-                        </div>
-						
-                    </div>
-                </div>
-				<div class="row">
-						<div class="col-sm-12" align="right"><a href="resetovanje.html" >Zaboravili ste šifru?</a>					
-						</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-12" align="right"><a href="signup.html" class="btn btn-info">Nemate nalog? Registrujte se!</a>
-					</div>
-				</div>
-				
-            </form>
+            <h2 class="fw-300 c-grey-900 mB-40"><b>Resetovanje šifre</b></h2>
+            <p>Poštovani/a, link za resetovanje šifre je poslat na Vašu email adresu.</p>
+			<button class="btn btn-primary" type="button" onclick="vratiSe()">Vrati se nazad.</button>
         </div>
     </div>
     <script type="text/javascript" src="vendor.js"></script>
     <script type="text/javascript" src="bundle.js"></script>
+	<script>
+		function vratiSe(){
+			window.history.back();
+		}
+	</script>
 </body>
 </html>
