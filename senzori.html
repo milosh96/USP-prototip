@@ -3,6 +3,7 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
+	<script type="text/javascript" src="assets/static/js/jquery-3.3.1.min.js"></script>
     <title>Smart Farm</title>
     <style>
         #loader {
@@ -61,7 +62,7 @@ window.onload = function () {
 
 var tempMes = new CanvasJS.Chart("tempMes", {
 	title: {
-		text: "Istorija senzora za temperaturu zemlje - mesečno"
+		text: "Temperaturu zemlje - mesečno"
 	},
 	axisX: {
 		valueFormatString: "MMM YYYY"
@@ -90,7 +91,7 @@ var tempMes = new CanvasJS.Chart("tempMes", {
 		markerSize: 0,
 		yValueFormatString: "°C##.#",
 		dataPoints: [		
-			{ x: new Date(2017, 10, 01), y: 21.2 },
+			/*{ x: new Date(2017, 10, 01), y: 21.2 },
 			{ x: new Date(2017, 11, 01), y: 21.7 },
 			{ x: new Date(2017, 12, 01), y: 21.0},
 			{ x: new Date(2018, 01, 01), y: 20.8 },
@@ -104,7 +105,7 @@ var tempMes = new CanvasJS.Chart("tempMes", {
 			{ x: new Date(2018, 09, 01), y: 24.7 },
 			{ x: new Date(2018, 10, 01), y: 23.8 },
 			{ x: new Date(2018, 11, 01), y: 22.7 },
-			{ x: new Date(2018, 12, 01), y: 22.1 },
+			{ x: new Date(2018, 12, 01), y: 22.1 },*/
 			{ x: new Date(2019, 01, 01), y: 23.1 },
 			{ x: new Date(2019, 02, 01), y: 23.2 },
 			{ x: new Date(2019, 03, 01), y: 23.5 },
@@ -126,7 +127,7 @@ var tempMes = new CanvasJS.Chart("tempMes", {
 		color: "#006600",
 		yValueFormatString: "°C##.#",
 		dataPoints: [
-			{ x: new Date(2017, 10, 01), y: 22.9 },
+			/*{ x: new Date(2017, 10, 01), y: 22.9 },
 			{ x: new Date(2017, 11, 01), y: 23.7 },
 			{ x: new Date(2017, 12, 01), y: 23.2 },
 			{ x: new Date(2018, 01, 01), y: 22.9 },
@@ -140,7 +141,7 @@ var tempMes = new CanvasJS.Chart("tempMes", {
 			{ x: new Date(2018, 09, 01), y: 23.9 },
 			{ x: new Date(2018, 10, 01), y: 23.8 },
 			{ x: new Date(2018, 11, 01), y: 22.9 },
-			{ x: new Date(2018, 12, 01), y: 22.7 },
+			{ x: new Date(2018, 12, 01), y: 22.7 },*/
 			{ x: new Date(2019, 01, 01), y: 23.2 },
 			{ x: new Date(2019, 02, 01), y: 23.4 },
 			{ x: new Date(2019, 03, 01), y: 24.2 },
@@ -157,7 +158,7 @@ var tempMes = new CanvasJS.Chart("tempMes", {
 
 var vlaMes = new CanvasJS.Chart("vlaMes", {
 	title: {
-		text: "Istorija senzora za vlažnosti zemlje- mesečno"
+		text: "Vlažnosti zemlje- mesečno"
 	},
 	axisX: {
 		valueFormatString: "MMM YYYY"
@@ -185,7 +186,7 @@ var vlaMes = new CanvasJS.Chart("vlaMes", {
 		markerSize: 0,
 		yValueFormatString: "#,##%",
 		dataPoints: [		
-			{ x: new Date(2017, 10, 01), y: 71.2 },
+			/*{ x: new Date(2017, 10, 01), y: 71.2 },
 			{ x: new Date(2017, 11, 01), y: 71.7 },
 			{ x: new Date(2017, 12, 01), y: 71.0 },
 			{ x: new Date(2018, 01, 01), y: 70.8 },
@@ -199,7 +200,7 @@ var vlaMes = new CanvasJS.Chart("vlaMes", {
 			{ x: new Date(2018, 09, 01), y: 75.7 },
 			{ x: new Date(2018, 10, 01), y: 73.8 },
 			{ x: new Date(2018, 11, 01), y: 72.7 },
-			{ x: new Date(2018, 12, 01), y: 72.1 },
+			{ x: new Date(2018, 12, 01), y: 72.1 },*/
 			{ x: new Date(2019, 01, 01), y: 73.1 },
 			{ x: new Date(2019, 02, 01), y: 73.2 },
 			{ x: new Date(2019, 03, 01), y: 73.5 },
@@ -220,7 +221,7 @@ var vlaMes = new CanvasJS.Chart("vlaMes", {
 		markerSize: 0,
 		yValueFormatString: "#,##%",
 		dataPoints: [
-			{ x: new Date(2017, 10, 01), y: 72.9 },
+			/*{ x: new Date(2017, 10, 01), y: 72.9 },
 			{ x: new Date(2017, 11, 01), y: 73.7 },
 			{ x: new Date(2017, 12, 01), y: 73.2 },
 			{ x: new Date(2018, 01, 01), y: 72.9 },
@@ -234,7 +235,7 @@ var vlaMes = new CanvasJS.Chart("vlaMes", {
 			{ x: new Date(2018, 09, 01), y: 73.9 },
 			{ x: new Date(2018, 10, 01), y: 73.8 },
 			{ x: new Date(2018, 11, 01), y: 72.9 },
-			{ x: new Date(2018, 12, 01), y: 72.7 },
+			{ x: new Date(2018, 12, 01), y: 72.7 },*/
 			{ x: new Date(2019, 01, 01), y: 73.2 },
 			{ x: new Date(2019, 02, 01), y: 73.4 },
 			{ x: new Date(2019, 03, 01), y: 74.2 },
@@ -251,10 +252,10 @@ var vlaMes = new CanvasJS.Chart("vlaMes", {
 
 var tempDne = new CanvasJS.Chart("tempDne", {
 	title: {
-		text: "Istorija senzora za temperaturu zemlje - mesečno"
+		text: "Temperaturu zemlje - dnevno"
 	},
 	axisX: {
-		valueFormatString: "MMM YYYY"
+		valueFormatString: "DD MMM"
 	},
 	axisY2: {
 		title: "Temperatura",
@@ -276,34 +277,35 @@ var tempDne = new CanvasJS.Chart("tempDne", {
 		axisYType: "secondary",
 		name: "Temperatura - Senzor 1",
 		showInLegend: true,
+		color: "#66ff33",
 		markerSize: 0,
 		yValueFormatString: "°C##.#",
 		dataPoints: [		
-			{ x: new Date(2017, 10, 01), y: 21.2 },
-			{ x: new Date(2017, 11, 01), y: 21.7 },
-			{ x: new Date(2017, 12, 01), y: 21.0},
-			{ x: new Date(2018, 01, 01), y: 20.8 },
-			{ x: new Date(2018, 02, 01), y: 21.9 },
-			{ x: new Date(2018, 03, 01), y: 23.2 },
-			{ x: new Date(2018, 04, 01), y: 24.5 },
-			{ x: new Date(2018, 05, 01), y: 25.7 },
-			{ x: new Date(2018, 06, 01), y: 25.5 },
-			{ x: new Date(2018, 07, 01), y: 25.9 },
-			{ x: new Date(2018, 08, 01), y: 26.1 },
-			{ x: new Date(2018, 09, 01), y: 24.7 },
-			{ x: new Date(2018, 10, 01), y: 23.8 },
-			{ x: new Date(2018, 11, 01), y: 22.7 },
-			{ x: new Date(2018, 12, 01), y: 22.1 },
-			{ x: new Date(2019, 01, 01), y: 23.1 },
-			{ x: new Date(2019, 02, 01), y: 23.2 },
-			{ x: new Date(2019, 03, 01), y: 23.5 },
-			{ x: new Date(2019, 04, 01), y: 24.2 },
-			{ x: new Date(2019, 05, 01), y: 24.3 },
-			{ x: new Date(2019, 06, 01), y: 24.7 },
-			{ x: new Date(2019, 07, 01), y: 25.5 },
-			{ x: new Date(2019, 08, 01), y: 26.2 },
-			{ x: new Date(2019, 09, 01), y: 24.7 },
-			{ x: new Date(2019, 10, 01), y: 22.9 }
+			//{ x: new Date(2017, 10, 01), y: 21.2 },
+			//{ x: new Date(2017, 11, 01), y: 21.7 },
+			//{ x: new Date(2017, 12, 01), y: 21.0},
+			//{ x: new Date(2018, 01, 01), y: 20.8 },
+			//{ x: new Date(2018, 02, 01), y: 21.9 },
+			//{ x: new Date(2018, 03, 01), y: 23.2 },
+			//{ x: new Date(2018, 04, 01), y: 24.5 },
+			//{ x: new Date(2018, 05, 01), y: 25.7 },
+			//{ x: new Date(2018, 06, 01), y: 25.5 },
+			//{ x: new Date(2018, 07, 01), y: 25.9 },
+			//{ x: new Date(2018, 08, 01), y: 26.1 },
+			//{ x: new Date(2018, 09, 01), y: 24.7 },
+			//{ x: new Date(2018, 10, 01), y: 23.8 },
+			//{ x: new Date(2018, 11, 01), y: 22.7 },
+			//{ x: new Date(2018, 12, 01), y: 22.1 },
+			{ x: new Date(2019, 10, 01), y: 23.1 },
+			{ x: new Date(2019, 10, 02), y: 23.2 },
+			{ x: new Date(2019, 10, 03), y: 23.5 },
+			{ x: new Date(2019, 10, 04), y: 24.2 },
+			{ x: new Date(2019, 10, 05), y: 24.3 },
+			{ x: new Date(2019, 10, 06), y: 24.7 },
+			{ x: new Date(2019, 10, 07), y: 25.5 },
+			{ x: new Date(2019, 10, 08), y: 26.2 },
+			{ x: new Date(2019, 10, 09), y: 24.7 },
+			{ x: new Date(2019, 10, 10), y: 22.9 }
 		]
 	},
 	{
@@ -312,9 +314,10 @@ var tempDne = new CanvasJS.Chart("tempDne", {
 		name: "Temperatura - Senzor 2",
 		showInLegend: true,
 		markerSize: 0,
+		color: "#006600",
 		yValueFormatString: "°C##.#",
 		dataPoints: [
-			{ x: new Date(2017, 10, 01), y: 22.9 },
+			/*{ x: new Date(2017, 10, 01), y: 22.9 },
 			{ x: new Date(2017, 11, 01), y: 23.7 },
 			{ x: new Date(2017, 12, 01), y: 23.2 },
 			{ x: new Date(2018, 01, 01), y: 22.9 },
@@ -328,27 +331,27 @@ var tempDne = new CanvasJS.Chart("tempDne", {
 			{ x: new Date(2018, 09, 01), y: 23.9 },
 			{ x: new Date(2018, 10, 01), y: 23.8 },
 			{ x: new Date(2018, 11, 01), y: 22.9 },
-			{ x: new Date(2018, 12, 01), y: 22.7 },
-			{ x: new Date(2019, 01, 01), y: 23.2 },
-			{ x: new Date(2019, 02, 01), y: 23.4 },
-			{ x: new Date(2019, 03, 01), y: 24.2 },
-			{ x: new Date(2019, 04, 01), y: 24.5 },
-			{ x: new Date(2019, 05, 01), y: 24.3 },
-			{ x: new Date(2019, 06, 01), y: 25.9 },
-			{ x: new Date(2019, 07, 01), y: 25.8 },
-			{ x: new Date(2019, 08, 01), y: 24.9 },
-			{ x: new Date(2019, 09, 01), y: 24.3 },
-			{ x: new Date(2019, 10, 01), y: 23.4 }
+			{ x: new Date(2018, 12, 01), y: 22.7 },*/
+			{ x: new Date(2019, 10, 01), y: 23.2 },
+			{ x: new Date(2019, 10, 02), y: 23.4 },
+			{ x: new Date(2019, 10, 03), y: 24.2 },
+			{ x: new Date(2019, 10, 04), y: 24.5 },
+			{ x: new Date(2019, 10, 05), y: 24.3 },
+			{ x: new Date(2019, 10, 06), y: 25.9 },
+			{ x: new Date(2019, 10, 07), y: 25.8 },
+			{ x: new Date(2019, 10, 08), y: 24.9 },
+			{ x: new Date(2019, 10, 09), y: 24.3 },
+			{ x: new Date(2019, 10, 10), y: 23.4 }
 		]
 	}]
 });
 
 var vlaDne = new CanvasJS.Chart("vlaDne", {
 	title: {
-		text: "Istorija senzora za vlažnosti zemlje- mesečno"
+		text: "Vlažnosti zemlje- dnevno"
 	},
 	axisX: {
-		valueFormatString: "MMM YYYY"
+		valueFormatString: "DD MMM"
 	},
 	axisY2: {
 		title: "Vlažnost",
@@ -373,7 +376,7 @@ var vlaDne = new CanvasJS.Chart("vlaDne", {
 		markerSize: 0,
 		yValueFormatString: "#,##%",
 		dataPoints: [		
-			{ x: new Date(2017, 10, 01), y: 71.2 },
+			/*{ x: new Date(2017, 10, 01), y: 71.2 },
 			{ x: new Date(2017, 11, 01), y: 71.7 },
 			{ x: new Date(2017, 12, 01), y: 71.0 },
 			{ x: new Date(2018, 01, 01), y: 70.8 },
@@ -387,17 +390,17 @@ var vlaDne = new CanvasJS.Chart("vlaDne", {
 			{ x: new Date(2018, 09, 01), y: 75.7 },
 			{ x: new Date(2018, 10, 01), y: 73.8 },
 			{ x: new Date(2018, 11, 01), y: 72.7 },
-			{ x: new Date(2018, 12, 01), y: 72.1 },
-			{ x: new Date(2019, 01, 01), y: 73.1 },
-			{ x: new Date(2019, 02, 01), y: 73.2 },
-			{ x: new Date(2019, 03, 01), y: 73.5 },
-			{ x: new Date(2019, 04, 01), y: 74.2 },
-			{ x: new Date(2019, 05, 01), y: 74.3 },
-			{ x: new Date(2019, 06, 01), y: 74.7 },
-			{ x: new Date(2019, 07, 01), y: 75.5 },
-			{ x: new Date(2019, 08, 01), y: 76.2 },
-			{ x: new Date(2019, 09, 01), y: 74.7 },
-			{ x: new Date(2019, 10, 01), y: 72.9 }
+			{ x: new Date(2018, 12, 01), y: 72.1 },*/
+			{ x: new Date(2019, 10, 01), y: 73.1 },
+			{ x: new Date(2019, 10, 02), y: 73.2 },
+			{ x: new Date(2019, 10, 03), y: 73.5 },
+			{ x: new Date(2019, 10, 04), y: 74.2 },
+			{ x: new Date(2019, 10, 05), y: 74.3 },
+			{ x: new Date(2019, 10, 06), y: 74.7 },
+			{ x: new Date(2019, 10, 07), y: 75.5 },
+			{ x: new Date(2019, 10, 08), y: 76.2 },
+			{ x: new Date(2019, 10, 09), y: 74.7 },
+			{ x: new Date(2019, 10, 10), y: 72.9 }
 		]
 	},
 	{
@@ -408,7 +411,7 @@ var vlaDne = new CanvasJS.Chart("vlaDne", {
 		markerSize: 0,
 		yValueFormatString: "#,##%",
 		dataPoints: [
-			{ x: new Date(2017, 10, 01), y: 72.9 },
+			/*{ x: new Date(2017, 10, 01), y: 72.9 },
 			{ x: new Date(2017, 11, 01), y: 73.7 },
 			{ x: new Date(2017, 12, 01), y: 73.2 },
 			{ x: new Date(2018, 01, 01), y: 72.9 },
@@ -422,22 +425,164 @@ var vlaDne = new CanvasJS.Chart("vlaDne", {
 			{ x: new Date(2018, 09, 01), y: 73.9 },
 			{ x: new Date(2018, 10, 01), y: 73.8 },
 			{ x: new Date(2018, 11, 01), y: 72.9 },
-			{ x: new Date(2018, 12, 01), y: 72.7 },
-			{ x: new Date(2019, 01, 01), y: 73.2 },
-			{ x: new Date(2019, 02, 01), y: 73.4 },
-			{ x: new Date(2019, 03, 01), y: 74.2 },
-			{ x: new Date(2019, 04, 01), y: 74.5 },
-			{ x: new Date(2019, 05, 01), y: 74.3 },
-			{ x: new Date(2019, 06, 01), y: 75.9 },
-			{ x: new Date(2019, 07, 01), y: 75.8 },
-			{ x: new Date(2019, 08, 01), y: 74.9 },
-			{ x: new Date(2019, 09, 01), y: 74.3 },
-			{ x: new Date(2019, 10, 01), y: 73.4 }
+			{ x: new Date(2018, 12, 01), y: 72.7 },*/
+			{ x: new Date(2019, 10, 01), y: 73.2 },
+			{ x: new Date(2019, 10, 02), y: 73.4 },
+			{ x: new Date(2019, 10, 03), y: 74.2 },
+			{ x: new Date(2019, 10, 04), y: 74.5 },
+			{ x: new Date(2019, 10, 05), y: 74.3 },
+			{ x: new Date(2019, 10, 06), y: 75.9 },
+			{ x: new Date(2019, 10, 07), y: 75.8 },
+			{ x: new Date(2019, 10, 08), y: 74.9 },
+			{ x: new Date(2019, 10, 09), y: 74.3 },
+			{ x: new Date(2019, 10, 10), y: 73.4 }
+		]
+	}]
+});
+
+
+var tempSat = new CanvasJS.Chart("tempSat", {
+	title: {
+		text: "Temperaturu zemlje - časovno"
+	},
+	axisX: {
+		valueFormatString: "HH:mm"
+	},
+	axisY2: {
+		title: "Temperatura",
+		prefix: "",
+		suffix: "°C"
+	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor: "pointer",
+		verticalAlign: "top",
+		color: "#66ff33",
+		horizontalAlign: "center",
+		dockInsidePlotArea: true,
+		itemclick: toogleDataSeries
+	},
+	data: [{
+		type:"line",
+		axisYType: "secondary",
+		name: "Temperatura - Senzor 1",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "°C##.#",
+		dataPoints: [		
+			{ x: new Date(2019, 10, 01, 0, 0, 0), y: 18.9 },
+			{ x: new Date(2019, 10, 01, 1, 0, 0), y: 19.1 },
+			{ x: new Date(2019, 10, 01, 2, 0, 0), y: 19.2 },
+			{ x: new Date(2019, 10, 01, 3, 0, 0), y: 19.3 },
+			{ x: new Date(2019, 10, 01, 4, 0, 0), y: 19.9 },
+			{ x: new Date(2019, 10, 01, 5, 0, 0), y: 20.2 },
+			{ x: new Date(2019, 10, 01, 6, 0, 0), y: 20.9 },
+			{ x: new Date(2019, 10, 01, 7, 0, 0), y: 21.3 },
+			{ x: new Date(2019, 10, 01, 8, 0, 0), y: 21.9 },
+			{ x: new Date(2019, 10, 01, 9, 0, 0), y: 22.2 },
+			{ x: new Date(2019, 10, 01, 10, 0, 0), y: 22.4 },
+			{ x: new Date(2019, 10, 01, 11, 0, 0), y: 22.9 },
+		]
+	},
+	{
+		type: "line",
+		axisYType: "secondary",
+		name: "Temperatura - Senzor 2",
+		showInLegend: true,
+		color: "#006600",
+		markerSize: 0,
+		yValueFormatString: "°C##.#",
+		dataPoints: [
+			{ x: new Date(2019, 10, 01, 0, 0, 0), y: 19.0 },
+			{ x: new Date(2019, 10, 01, 1, 0, 0), y: 19.2 },
+			{ x: new Date(2019, 10, 01, 2, 0, 0), y: 19.3 },
+			{ x: new Date(2019, 10, 01, 3, 0, 0), y: 19.5 },
+			{ x: new Date(2019, 10, 01, 4, 0, 0), y: 20.0 },
+			{ x: new Date(2019, 10, 01, 5, 0, 0), y: 20.3 },
+			{ x: new Date(2019, 10, 01, 6, 0, 0), y: 20.9 },
+			{ x: new Date(2019, 10, 01, 7, 0, 0), y: 21.4 },
+			{ x: new Date(2019, 10, 01, 8, 0, 0), y: 22.0 },
+			{ x: new Date(2019, 10, 01, 9, 0, 0), y: 22.2 },
+			{ x: new Date(2019, 10, 01, 10, 0, 0), y: 22.5 },
+			{ x: new Date(2019, 10, 01, 11, 0, 0), y: 22.8 },
+		]
+	}]
+});
+
+var vlaSat = new CanvasJS.Chart("vlaSat", {
+	title: {
+		text: "Vlažnosti zemlje- časovno"
+	},
+	axisX: {
+		valueFormatString: "HH:mm"
+	},
+	axisY2: {
+		title: "Vlažnost",
+		prefix: "",
+		suffix: "%"
+	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor: "pointer",
+		verticalAlign: "top",
+		horizontalAlign: "center",
+		dockInsidePlotArea: true,
+		itemclick: toogleDataSeries
+	},
+	data: [{
+		type:"line",
+		axisYType: "secondary",
+		name: "Vlažnost - Senzor 1",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "#,##%",
+		dataPoints: [	
+			{ x: new Date(2019, 10, 01, 1, 0, 0), y: 72.1 },
+			{ x: new Date(2019, 10, 01, 2, 0, 0), y: 73.1 },
+			{ x: new Date(2019, 10, 01, 3, 0, 0), y: 73.2 },
+			{ x: new Date(2019, 10, 01, 4, 0 ,0), y: 73.5 },
+			{ x: new Date(2019, 10, 01, 5, 0, 0), y: 74.2 },
+			{ x: new Date(2019, 10, 01, 6, 0, 0), y: 74.3 },
+			{ x: new Date(2019, 10, 01, 7, 0, 0), y: 74.7 },
+			{ x: new Date(2019, 10, 01, 8, 0, 0), y: 75.5 },
+			{ x: new Date(2019, 10, 01, 9, 0, 0), y: 76.2 },
+			{ x: new Date(2019, 10, 01, 10, 0, 0), y: 74.7 },
+			{ x: new Date(2019, 10, 01, 11, 0, 0), y: 72.9 }
+		]
+	},
+	{
+		type: "line",
+		axisYType: "secondary",
+		name: "Vlažnost - Senzor 2",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "#,##%",
+		dataPoints: [
+			{ x: new Date(2019, 10, 01, 1, 0, 0), y: 73.2 },
+			{ x: new Date(2019, 10, 01, 2, 0, 0), y: 73.4 },
+			{ x: new Date(2019, 10, 01, 3, 0, 0), y: 74.2 },
+			{ x: new Date(2019, 10, 01, 4, 0 ,0), y: 74.5 },
+			{ x: new Date(2019, 10, 01, 5, 0, 0), y: 74.3 },
+			{ x: new Date(2019, 10, 01, 6, 0, 0), y: 75.9 },
+			{ x: new Date(2019, 10, 01, 7, 0, 0), y: 75.8 },
+			{ x: new Date(2019, 10, 01, 8, 0, 0), y: 74.9 },
+			{ x: new Date(2019, 10, 01, 9, 0, 0), y: 74.3 },
+			{ x: new Date(2019, 10, 01, 10, 0, 0), y: 73.4 },
+			{ x: new Date(2019, 10, 01, 11, 0, 0), y: 72.9 }
 		]
 	}]
 });
 tempMes.render();
 vlaMes.render();
+tempDne.render();
+vlaDne.render();
+tempSat.render();
+vlaSat.render();
+
 
 function toogleDataSeries(e){
 	if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
@@ -447,9 +592,98 @@ function toogleDataSeries(e){
 	}
 	tempMes.render();
 	vlaMes.render();
+	tempDne.render();
+	vlaDne.render();
+	tempSat.render();
+	vlaSat.render();
 }
 
+$("#povecajTemperaturu").click(function () {
+
+	var length = tempSat.options.data[0].dataPoints.length;
+	
+	var length2 = vlaSat.options.data[0].dataPoints.length;
+	
+	//chart.options.title.text = "New DataPoint Added at the end";
+	x = tempSat.options.data[0].dataPoints[length-1];
+	x1 = tempSat.options.data[1].dataPoints[length-1];
+	
+	x2 = vlaSat.options.data[0].dataPoints[length2-1];
+	x3 = vlaSat.options.data[1].dataPoints[length2-1];
+	
+	novaTemp = x.y + Math.random() * 0.5;
+	noviDan = new Date(x.x.getTime() + 60*60*1000);
+	
+	novaTemp1 = x1.y + Math.random() * 0.5;
+	
+	novaVlaz = x2.y + Math.random() * 0.5;
+	
+	novaVlaz1 = x3.y + Math.random() * 0.5;
+	
+	tempSat.options.data[0].dataPoints.push({ x: noviDan, y: novaTemp});
+	tempSat.options.data[1].dataPoints.push({ x: noviDan, y: novaTemp1});
+	
+	vlaSat.options.data[0].dataPoints.push({ x: noviDan, y: novaVlaz});
+	vlaSat.options.data[1].dataPoints.push({ x: noviDan, y: novaVlaz1});
+	
+	tempSat.render();
+	vlaSat.render();
+
+	});
+
+	$("#umanjiTemperaturu").click(function () {
+
+	var length = tempSat.options.data[0].dataPoints.length;
+	
+	var length2 = vlaSat.options.data[0].dataPoints.length;
+	
+	//chart.options.title.text = "New DataPoint Added at the end";
+	x = tempSat.options.data[0].dataPoints[length-1];
+	x1 = tempSat.options.data[1].dataPoints[length-1];
+	
+	x2 = vlaSat.options.data[0].dataPoints[length2-1];
+	x3 = vlaSat.options.data[1].dataPoints[length2-1];
+	
+	novaTemp = x.y - Math.random() * 0.5;
+	noviDan = new Date(x.x.getTime() + 60*60*1000);
+	
+	novaTemp1 = x1.y - Math.random() * 0.5;
+	
+	novaVlaz = x2.y - Math.random() * 0.5;
+	
+	novaVlaz1 = x3.y - Math.random() * 0.5;
+	
+	tempSat.options.data[0].dataPoints.push({ x: noviDan, y: novaTemp});
+	tempSat.options.data[1].dataPoints.push({ x: noviDan, y: novaTemp1});
+	
+	vlaSat.options.data[0].dataPoints.push({ x: noviDan, y: novaVlaz});
+	vlaSat.options.data[1].dataPoints.push({ x: noviDan, y: novaVlaz1});
+	
+	tempSat.render();
+	vlaSat.render();
+
+	});
 }
+
+
+function postavi(x){
+
+	if(x == "mes"){
+		document.getElementById("canvasMes").style.display = "";
+		document.getElementById("canvasDne").style.display = "none";
+		document.getElementById("canvasSat").style.display = "none";
+	}else if(x == "dne"){
+		document.getElementById("canvasDne").style.display = "";
+		document.getElementById("canvasMes").style.display = "none";
+		document.getElementById("canvasSat").style.display = "none";
+	}else if (x == "sat"){
+		document.getElementById("canvasSat").style.display = "";
+		document.getElementById("canvasMes").style.display = "none";
+		document.getElementById("canvasDne").style.display = "none";
+	}
+	
+}
+
 </script>
 </head>
 
@@ -525,7 +759,59 @@ function toogleDataSeries(e){
 						</div>
 						<div class="col-sm-3 mt-3 mr-0 ml-0"  >&nbsp;</div>
 					</div>
-					<div class ="row">
+					
+					<div class ="row" >
+						<div class="col-sm-3 mt-3 mr-0 ml-0"  >&nbsp;</div>
+						<div class="col-sm-6 mt-3 mr-0 ml-0"  align = "center" >
+							Odaberite pregled senzora:
+						</div>
+						<div class="col-sm-3 mt-3 mr-0 ml-0"  >&nbsp;</div>
+					</div>
+					
+					<div class ="row" >
+						<div class="col-sm-3 mt-3 mr-0 ml-0"  >&nbsp;</div>
+						<div class="col-sm-2 mt-3 mr-0 ml-0"  align = "center">
+							<button type = "button" class = "btn btn-primary" onclick = 'postavi("sat")'>Časovni</button>
+						</div>
+						<div class="col-sm-2 mt-3 mr-0 ml-0"  align = "center">
+							<button type = "button" class = "btn btn-primary" onclick = 'postavi("dne")'>Dnevni</button>
+						</div>
+						<div class="col-sm-2 mt-3 mr-0 ml-0"  align = "center">
+							<button type = "button" class = "btn btn-primary" onclick = 'postavi("mes")'>Mesečni</button>
+						</div>
+						<div class="col-sm-3 mt-3 mr-0 ml-0"  >&nbsp;</div>
+					</div>
+					<div class = "row" id = "canvasSat" style = "display:show;">
+						<div class="col-sm-6 mt-3 mr-0 ml-0" >
+							<div id="tempSat" style=" height: 370px; max-width: 920px; margin: 0px auto;"></div>
+						</div>
+						<div class="col-sm-6 mt-3">
+							<div id="vlaSat" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
+						</div>
+						
+						<div class="col-sm-4 mt-3" >
+							&nbsp;
+						</div>
+						<div class="col-sm-2 mt-3" >
+							<button class = "btn btn-primary" id="povecajTemperaturu">Povecaj temperaturu</button>
+						</div>
+						<div class="col-sm-2 mt-3" >
+							<button class = "btn btn-secondary" id="umanjiTemperaturu">Umanji temperaturu</button>
+						</div>
+						<div class="col-sm-4 mt-3" >
+							&nbsp;
+						</div>
+						
+					</div>
+					<div class = "row" id = "canvasDne" style = "display:none;">
+						<div class="col-sm-6 mt-3 mr-0 ml-0" >
+							<div id="tempDne" style=" height: 370px; max-width: 920px; margin: 0px auto;"></div>
+						</div>
+						<div class="col-sm-6 mt-3">
+							<div id="vlaDne" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
+						</div>
+					</div>
+					<div class = "row" id = "canvasMes" style = "display:none;">
 						<div class="col-sm-6 mt-3 mr-0 ml-0" >
 							<div id="tempMes" style=" height: 370px; max-width: 920px; margin: 0px auto;"></div>
 						</div>
