@@ -59,7 +59,197 @@
 	<script>
 window.onload = function () {
 
-var chart = new CanvasJS.Chart("chartContainer", {
+var tempMes = new CanvasJS.Chart("tempMes", {
+	title: {
+		text: "Istorija senzora za temperaturu zemlje - mesečno"
+	},
+	axisX: {
+		valueFormatString: "MMM YYYY"
+	},
+	axisY2: {
+		title: "Temperatura",
+		prefix: "",
+		suffix: "°C"
+	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor: "pointer",
+		verticalAlign: "top",
+		horizontalAlign: "center",
+		dockInsidePlotArea: true,
+		itemclick: toogleDataSeries
+	},
+	data: [{
+		type:"line",
+		axisYType: "secondary",
+		name: "Temperatura - Senzor 1",
+		showInLegend: true,
+		color: "#66ff33",
+		markerSize: 0,
+		yValueFormatString: "°C##.#",
+		dataPoints: [		
+			{ x: new Date(2017, 10, 01), y: 21.2 },
+			{ x: new Date(2017, 11, 01), y: 21.7 },
+			{ x: new Date(2017, 12, 01), y: 21.0},
+			{ x: new Date(2018, 01, 01), y: 20.8 },
+			{ x: new Date(2018, 02, 01), y: 21.9 },
+			{ x: new Date(2018, 03, 01), y: 23.2 },
+			{ x: new Date(2018, 04, 01), y: 24.5 },
+			{ x: new Date(2018, 05, 01), y: 25.7 },
+			{ x: new Date(2018, 06, 01), y: 25.5 },
+			{ x: new Date(2018, 07, 01), y: 25.9 },
+			{ x: new Date(2018, 08, 01), y: 26.1 },
+			{ x: new Date(2018, 09, 01), y: 24.7 },
+			{ x: new Date(2018, 10, 01), y: 23.8 },
+			{ x: new Date(2018, 11, 01), y: 22.7 },
+			{ x: new Date(2018, 12, 01), y: 22.1 },
+			{ x: new Date(2019, 01, 01), y: 23.1 },
+			{ x: new Date(2019, 02, 01), y: 23.2 },
+			{ x: new Date(2019, 03, 01), y: 23.5 },
+			{ x: new Date(2019, 04, 01), y: 24.2 },
+			{ x: new Date(2019, 05, 01), y: 24.3 },
+			{ x: new Date(2019, 06, 01), y: 24.7 },
+			{ x: new Date(2019, 07, 01), y: 25.5 },
+			{ x: new Date(2019, 08, 01), y: 26.2 },
+			{ x: new Date(2019, 09, 01), y: 24.7 },
+			{ x: new Date(2019, 10, 01), y: 22.9 }
+		]
+	},
+	{
+		type: "line",
+		axisYType: "secondary",
+		name: "Temperatura - Senzor 2",
+		showInLegend: true,
+		markerSize: 0,
+		color: "#006600",
+		yValueFormatString: "°C##.#",
+		dataPoints: [
+			{ x: new Date(2017, 10, 01), y: 22.9 },
+			{ x: new Date(2017, 11, 01), y: 23.7 },
+			{ x: new Date(2017, 12, 01), y: 23.2 },
+			{ x: new Date(2018, 01, 01), y: 22.9 },
+			{ x: new Date(2018, 02, 01), y: 23.7 },
+			{ x: new Date(2018, 03, 01), y: 24.5 },
+			{ x: new Date(2018, 04, 01), y: 24.6 },
+			{ x: new Date(2018, 05, 01), y: 23.8 },
+			{ x: new Date(2018, 06, 01), y: 24.6 },
+			{ x: new Date(2018, 07, 01), y: 24.2 },
+			{ x: new Date(2018, 08, 01), y: 24.8 },
+			{ x: new Date(2018, 09, 01), y: 23.9 },
+			{ x: new Date(2018, 10, 01), y: 23.8 },
+			{ x: new Date(2018, 11, 01), y: 22.9 },
+			{ x: new Date(2018, 12, 01), y: 22.7 },
+			{ x: new Date(2019, 01, 01), y: 23.2 },
+			{ x: new Date(2019, 02, 01), y: 23.4 },
+			{ x: new Date(2019, 03, 01), y: 24.2 },
+			{ x: new Date(2019, 04, 01), y: 24.5 },
+			{ x: new Date(2019, 05, 01), y: 24.3 },
+			{ x: new Date(2019, 06, 01), y: 25.9 },
+			{ x: new Date(2019, 07, 01), y: 25.8 },
+			{ x: new Date(2019, 08, 01), y: 24.9 },
+			{ x: new Date(2019, 09, 01), y: 24.3 },
+			{ x: new Date(2019, 10, 01), y: 23.4 }
+		]
+	}]
+});
+
+var vlaMes = new CanvasJS.Chart("vlaMes", {
+	title: {
+		text: "Istorija senzora za vlažnosti zemlje- mesečno"
+	},
+	axisX: {
+		valueFormatString: "MMM YYYY"
+	},
+	axisY2: {
+		title: "Vlažnost",
+		prefix: "",
+		suffix: "%"
+	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor: "pointer",
+		verticalAlign: "top",
+		horizontalAlign: "center",
+		dockInsidePlotArea: true,
+		itemclick: toogleDataSeries
+	},
+	data: [{
+		type:"line",
+		axisYType: "secondary",
+		name: "Vlažnost - Senzor 1",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "#,##%",
+		dataPoints: [		
+			{ x: new Date(2017, 10, 01), y: 71.2 },
+			{ x: new Date(2017, 11, 01), y: 71.7 },
+			{ x: new Date(2017, 12, 01), y: 71.0 },
+			{ x: new Date(2018, 01, 01), y: 70.8 },
+			{ x: new Date(2018, 02, 01), y: 71.9 },
+			{ x: new Date(2018, 03, 01), y: 73.2 },
+			{ x: new Date(2018, 04, 01), y: 74.5 },
+			{ x: new Date(2018, 05, 01), y: 75.7 },
+			{ x: new Date(2018, 06, 01), y: 75.5 },
+			{ x: new Date(2018, 07, 01), y: 75.9 },
+			{ x: new Date(2018, 08, 01), y: 76.1 },
+			{ x: new Date(2018, 09, 01), y: 75.7 },
+			{ x: new Date(2018, 10, 01), y: 73.8 },
+			{ x: new Date(2018, 11, 01), y: 72.7 },
+			{ x: new Date(2018, 12, 01), y: 72.1 },
+			{ x: new Date(2019, 01, 01), y: 73.1 },
+			{ x: new Date(2019, 02, 01), y: 73.2 },
+			{ x: new Date(2019, 03, 01), y: 73.5 },
+			{ x: new Date(2019, 04, 01), y: 74.2 },
+			{ x: new Date(2019, 05, 01), y: 74.3 },
+			{ x: new Date(2019, 06, 01), y: 74.7 },
+			{ x: new Date(2019, 07, 01), y: 75.5 },
+			{ x: new Date(2019, 08, 01), y: 76.2 },
+			{ x: new Date(2019, 09, 01), y: 74.7 },
+			{ x: new Date(2019, 10, 01), y: 72.9 }
+		]
+	},
+	{
+		type: "line",
+		axisYType: "secondary",
+		name: "Vlažnost - Senzor 2",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "#,##%",
+		dataPoints: [
+			{ x: new Date(2017, 10, 01), y: 72.9 },
+			{ x: new Date(2017, 11, 01), y: 73.7 },
+			{ x: new Date(2017, 12, 01), y: 73.2 },
+			{ x: new Date(2018, 01, 01), y: 72.9 },
+			{ x: new Date(2018, 02, 01), y: 73.7 },
+			{ x: new Date(2018, 03, 01), y: 74.5 },
+			{ x: new Date(2018, 04, 01), y: 74.6 },
+			{ x: new Date(2018, 05, 01), y: 73.8 },
+			{ x: new Date(2018, 06, 01), y: 74.6 },
+			{ x: new Date(2018, 07, 01), y: 74.2 },
+			{ x: new Date(2018, 08, 01), y: 74.8 },
+			{ x: new Date(2018, 09, 01), y: 73.9 },
+			{ x: new Date(2018, 10, 01), y: 73.8 },
+			{ x: new Date(2018, 11, 01), y: 72.9 },
+			{ x: new Date(2018, 12, 01), y: 72.7 },
+			{ x: new Date(2019, 01, 01), y: 73.2 },
+			{ x: new Date(2019, 02, 01), y: 73.4 },
+			{ x: new Date(2019, 03, 01), y: 74.2 },
+			{ x: new Date(2019, 04, 01), y: 74.5 },
+			{ x: new Date(2019, 05, 01), y: 74.3 },
+			{ x: new Date(2019, 06, 01), y: 75.9 },
+			{ x: new Date(2019, 07, 01), y: 75.8 },
+			{ x: new Date(2019, 08, 01), y: 74.9 },
+			{ x: new Date(2019, 09, 01), y: 74.3 },
+			{ x: new Date(2019, 10, 01), y: 73.4 }
+		]
+	}]
+});
+
+var tempDne = new CanvasJS.Chart("tempDne", {
 	title: {
 		text: "Istorija senzora za temperaturu zemlje - mesečno"
 	},
@@ -153,7 +343,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	}]
 });
 
-var chart1 = new CanvasJS.Chart("chartContainer1", {
+var vlaDne = new CanvasJS.Chart("vlaDne", {
 	title: {
 		text: "Istorija senzora za vlažnosti zemlje- mesečno"
 	},
@@ -185,7 +375,7 @@ var chart1 = new CanvasJS.Chart("chartContainer1", {
 		dataPoints: [		
 			{ x: new Date(2017, 10, 01), y: 71.2 },
 			{ x: new Date(2017, 11, 01), y: 71.7 },
-			{ x: new Date(2017, 12, 01), y: 71.0},
+			{ x: new Date(2017, 12, 01), y: 71.0 },
 			{ x: new Date(2018, 01, 01), y: 70.8 },
 			{ x: new Date(2018, 02, 01), y: 71.9 },
 			{ x: new Date(2018, 03, 01), y: 73.2 },
@@ -246,9 +436,8 @@ var chart1 = new CanvasJS.Chart("chartContainer1", {
 		]
 	}]
 });
-
-chart.render();
-chart1.render();
+tempMes.render();
+vlaMes.render();
 
 function toogleDataSeries(e){
 	if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
@@ -256,8 +445,8 @@ function toogleDataSeries(e){
 	} else{
 		e.dataSeries.visible = true;
 	}
-	chart.render();
-	chart1.render();
+	tempMes.render();
+	vlaMes.render();
 }
 
 }
@@ -302,7 +491,7 @@ function toogleDataSeries(e){
                     <li class="nav-item"><a class="sidebar-link" href="calendar.html"><span class="icon-holder"><i class="c-deep-orange-500 ti-user"></i> </span><span class="title">Profil</span></a></li>
 					<li class="nav-item"><a class="sidebar-link" href="email.html"><span class="icon-holder"><i class="c-brown-500 ti-layout-list-thumb"></i> </span><span class="title">Proizvodi</span></a></li>
 					<li class="nav-item"><a class = "sidebar-link" href = "senzori.html"><span class = "icon-holder"><i class = "c-green-500 ti-pie-chart"></i></span><span class = "title">Senzori</span></a></li></li>
-				</ul>
+                </ul>
             </div>
         </div>
         <div class="page-container">
@@ -329,153 +518,23 @@ function toogleDataSeries(e){
             </div>
             <main class="main-content bgc-grey-100">
                 <div id="mainContent">
-					<div class = "row">
-                        <div class="col-sm-6 mt-3 mr-0">
-							<div class="layers">
-                                    <div class="layer w-100 p-20">
-                                        <h6 class="lh-1">Izveštaj o prodaji</h6></div>
-                                    <div class="layer w-100">
-                                        <div class="bgc-light-blue-500 c-white p-20">
-                                            <div class="peers ai-c jc-sb gap-40">
-                                                <div class="peer peer-greed">
-                                                    <h5>Novembar 2019</h5>
-                                                    <p class="mB-0">Mesečni izveštaj</p>
-                                                </div>
-                                                <div class="peer">
-                                                    <h3 class="text-right">RSD6,000</h3></div>
-                                            </div>
-                                        </div>
-                                        <div class="table-responsive p-20">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th class="bdwT-0">Naziv</th>
-                                                        <th class="bdwT-0">Status</th>
-                                                        <th class="bdwT-0">Datum</th>
-                                                        <th class="bdwT-0">Cena</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="fw-600">Krompir - seme</td>
-                                                        <td><span class="badge bgc-green-50 c-green-700 p-10 lh-0 tt-c badge-pill">Prodaja</span></td>
-                                                        <td>Nov 18</td>
-                                                        <td><span class="text-success">RSD1200</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="fw-600">Paprika - seme</td>
-                                                        <td><span class="badge bgc-green-50 c-green-700 p-10 lh-0 tt-c badge-pill">Prodaja</span></td>
-                                                        <td>Nov 19</td>
-                                                        <td><span class="text-success">RSD3400</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="fw-600">Krastavac 100kg</td>
-                                                        <td><span class="badge bgc-red-50 c-red-700 p-10 lh-0 tt-c badge-pill">Kupovina</span></td>
-                                                        <td>Nov 20</td>
-                                                        <td><span class="text-danger">-RSD4500</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="fw-600">Paradajz - seme</td>
-                                                        <td><span class="badge bgc-green-50 c-green-700 p-10 lh-0 tt-c badge-pill">Prodaja</span></td>
-                                                        <td>Nov 21</td>
-                                                        <td><span class="text-success">RSD6500</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="fw-600">Rotkvica - seme</td>
-                                                        <td><span class="badge bgc-red-50 c-red-700 p-10 lh-0 tt-c badge-pill">Kupovina</span></td>
-                                                        <td>Nov 22</td>
-                                                        <td><span class="text-danger">-RSD7800</span></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-							</div>
-							<div class="ta-c bdT w-100 p-20"><a href="#">Proveri sve kupovine</a></div>
-                        </div>
-                        <div class=" col-sm-6 mt-3">
-                                <div class="layers">
-                                    <div class="layer w-100 mT-25">
-                                        <h6 class="lh-1">Vremenska prognoza</h6>
-									</div>
-                                    <div class="layer w-100 mT-20">
-                                        <div class="peers ai-c jc-sb fxw-nw">
-                                            <div class="peer peer-greed">
-                                                <div class="layers">
-                                                    <div class="layer w-100">
-                                                        <div class="peers fxw-nw ai-c">
-                                                            <div class="peer mR-20">
-                                                                <h3>24<sup>°C</sup></h3></div>
-                                                            <div class="peer">
-                                                                <canvas class="sleet" width="44" height="44"></canvas>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="layer w-100"><span class="fw-600 c-grey-600">Naoblačenje</span></div>
-                                                </div>
-                                            </div>
-                                            <div class="peer">
-                                                <div class="layers ai-fe">
-                                                    <div class="layer">
-                                                        <h5 class="mB-5">Ponedeljak</h5></div>
-                                                    <div class="layer"><span class="fw-600 c-grey-600">Nov, 01 2019</span></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="layer w-100 mY-30">
-                                        <div class="layers bdB">
-                                            <div class="layer w-100 bdT pY-5">
-                                                <div class="peers ai-c jc-sb fxw-nw">
-                                                    <div class="peer"><span>Vetar</span></div>
-                                                    <div class="peer ta-r"><span class="fw-600 c-grey-800">10km/h</span></div>
-                                                </div>
-                                            </div>
-                                            <div class="layer w-100 bdT pY-5">
-                                                <div class="peers ai-c jc-sb fxw-nw">
-                                                    <div class="peer"><span>Svitanje</span></div>
-                                                    <div class="peer ta-r"><span class="fw-600 c-grey-800">05:00</span></div>
-                                                </div>
-                                            </div>
-                                            <div class="layer w-100 bdT pY-5">
-                                                <div class="peers ai-c jc-sb fxw-nw">
-                                                    <div class="peer"><span>Atmosferski pritisak</span></div>
-                                                    <div class="peer ta-r"><span class="fw-600 c-grey-800">1B</span></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="layer w-100">
-                                        <div class="peers peers-greed ai-fs ta-c">
-                                            <div class="peer">
-                                                <h6 class="mB-10">PON</h6>
-                                                <canvas class="sleet" width="30" height="30"></canvas><span class="d-b fw-600">23<sup>°C</sup></span></div>
-                                            <div class="peer">
-                                                <h6 class="mB-10">UTO</h6>
-                                                <canvas class="clear-day" width="30" height="30"></canvas><span class="d-b fw-600">30<sup>°C</sup></span></div>
-                                            <div class="peer">
-                                                <h6 class="mB-10">SRE</h6>
-                                                <canvas class="partly-cloudy-day" width="30" height="30"></canvas><span class="d-b fw-600">28<sup>°C</sup></span></div>
-                                            <div class="peer">
-                                                <h6 class="mB-10">ČET</h6>
-                                                <canvas class="cloudy" width="30" height="30"></canvas><span class="d-b fw-600">32<sup>°C</sup></span></div>
-                                            <div class="peer">
-                                                <h6 class="mB-10">PET</h6>
-                                                <canvas class="snow" width="30" height="30"></canvas><span class="d-b fw-600">24<sup>°C</sup></span></div>
-                                            <div class="peer">
-                                                <h6 class="mB-10">SUB</h6>
-                                                <canvas class="wind" width="30" height="30"></canvas><span class="d-b fw-600">28<sup>°C</sup></span></div>
-                                            <div class="peer">
-                                                <h6 class="mB-10">NED</h6>
-                                                <canvas class="sleet" width="30" height="30"></canvas><span class="d-b fw-600">26<sup>°C</sup></span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                        </div>
-                     </div>
+					<div class ="row" >
+						<div class="col-sm-3 mt-3 mr-0 ml-0"  >&nbsp;</div>
+						<div class="col-sm-6 mt-3 mr-0 ml-0"  >
+							<img src = "assets/static/images/farm_picture_cropped.png" alt = "tvojaFarma" />
+						</div>
+						<div class="col-sm-3 mt-3 mr-0 ml-0"  >&nbsp;</div>
+					</div>
+					<div class ="row">
+						<div class="col-sm-6 mt-3 mr-0 ml-0" >
+							<div id="tempMes" style=" height: 370px; max-width: 920px; margin: 0px auto;"></div>
+						</div>
+						<div class="col-sm-6 mt-3">
+							<div id="vlaMes" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
+						</div>
+					</div>
 					
-                    </div>
-				</div>
+			   </div>
             </main>
             <footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600"><span>Copyright © 2018 Designed by SmartFarm. All rights reserved.</span>
             </footer>
