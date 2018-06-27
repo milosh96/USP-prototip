@@ -79,11 +79,11 @@
             <form>
                 <div class="form-group">
                     <label class="text-normal text-dark">Korisničko ime</label>
-                    <input type="email" class="form-control" placeholder="Vaše korisničko ime">
+                    <input type="text" id="user" class="form-control" placeholder="Vaše korisničko ime">
                 </div>
                 <div class="form-group">
                     <label class="text-normal text-dark">Šifra</label>
-                    <input type="password" class="form-control" placeholder="Vaša šifra">
+                    <input type="password" id="pass" class="form-control" placeholder="Vaša šifra">
                 </div>
                 <div class="form-group">
                     <div class="peers ai-c jc-sb fxw-nw">
@@ -94,8 +94,7 @@
                             </div>
                         </div>
                         <div class="peer">
-                            <button class="btn btn-primary">Uloguj se</button>
-							
+                            <button class="btn btn-primary" onclick="login()">Uloguj se</button>							
                         </div>
 						
                     </div>
@@ -114,5 +113,19 @@
     </div>
     <script type="text/javascript" src="vendor.js"></script>
     <script type="text/javascript" src="bundle.js"></script>
+	<script>
+		function login(){
+			var user=document.getElementById("user").value;
+			var pass=document.getElementById("pass").value;
+			
+			if((user=="ironman")&&(pass=="natasha")){
+				window.open("index.html");
+			}
+			else{
+				alert("Unesite ispravne podatke.");
+			}
+
+		}
+	</script>
 </body>
 </html>
