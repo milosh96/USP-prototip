@@ -3,7 +3,7 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
-    <title>Smart Farm</title>
+    <title>Solarni paneli</title>
     <style>
         #loader {
             transition: all .3s ease-in-out;
@@ -56,52 +56,85 @@
         }
     </style>
     <link href="style.css" rel="stylesheet">
-	<script>
-</script>
-<script>
-	function ucitajPodatkeKorisnika(){
-		document.getElementById("naslov").innerHTML = "Korisnicke akcije";
-		document.getElementById("tabela").innerHTML = "";
-		var string = "";
-		var len = localStorage.length;
-		//alert(len);
-		for(var i = 0; i < len; i++){
-			var getKomanda = "komanda" + i;
-			var retrievedObject = localStorage.getItem(getKomanda);
-			retrievedObject = JSON.parse(retrievedObject);
-			//alert(retrievedObject);
-			if(retrievedObject.AI == 0){
-			string+="<tr><td>" + retrievedObject.vreme.split(".")[0].replace("T"," ") +"</td><td>"+ retrievedObject.naziv + "</td><td>" + retrievedObject.novaTemp.toFixed(2) + "</td><td>"+
-				retrievedObject.novaTemp1.toFixed(2) + "</td><td>" + retrievedObject.novaVlaz.toFixed(2) + "</td><td>" +retrievedObject.novaVlaz1.toFixed(2)+ "</td></tr>";
-			}
-			//alert(string);
-		}
-		document.getElementById("tabela").innerHTML = string;
-	}
 	
-	function ucitajPodatkeAI(){
-		document.getElementById("naslov").innerHTML = "AI akcije";
-		document.getElementById("tabela").innerHTML = "";
-		var string = "";
-		var len = localStorage.length;
-		//alert(len);
-		for(var i = 0; i < len; i++){
-			var getKomanda = "komanda" + i;
-			var retrievedObject = localStorage.getItem(getKomanda);
-			retrievedObject = JSON.parse(retrievedObject);
-			//alert(retrievedObject);
-			if(retrievedObject.AI == 1){
-			string+="<tr><td>" + retrievedObject.vreme.split(".")[0].replace("T"," ") +"</td><td>"+ retrievedObject.naziv + "</td><td>" + retrievedObject.novaTemp.toFixed(2) + "</td><td>"+
-				retrievedObject.novaTemp1.toFixed(2) + "</td><td>" + retrievedObject.novaVlaz.toFixed(2) + "</td><td>" +retrievedObject.novaVlaz1.toFixed(2)+ "</td></tr>";
-			}
-			//alert(string);
-		}
-		document.getElementById("tabela").innerHTML = string;
+	<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title:{
+		text: "Solarni paneli -statistika- 2019"
+	},	
+	axisY: {
+		title: "",
+		titleFontColor: "#4F81BC",
+		lineColor: "#4F81BC",
+		labelFontColor: "#4F81BC",
+		tickColor: "#4F81BC"
+	},
+	axisY2: {
+		title: "",
+		titleFontColor: "#C0504E",
+		lineColor: "#C0504E",
+		labelFontColor: "#C0504E",
+		tickColor: "#C0504E"
+	},	
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor:"pointer",
+		itemclick: toggleDataSeries
+	},
+	data: [{
+		type: "column",
+		name: "Proizvedeno kWh",
+		legendText: "Proizvedeno kWh",
+		showInLegend: true, 
+		dataPoints:[
+			{ label: "05.10.2019", y: 26.21 },
+			{ label: "06.10.2019", y: 30.25 },
+			{ label: "07.10.2019", y: 15.20 },
+			{ label: "08.10.2019", y: 14.77 },
+			{ label: "09.10.2019", y: 10.50 },
+			{ label: "10.10.2019", y: 9.8 }
+		]
+	},
+	{
+		type: "column",	
+		name: "Potroseno kWh",
+		legendText: "Potroseno kWh",
+		axisYType: "secondary",
+		showInLegend: true,
+		dataPoints:[
+			{ label: "05.10.2019", y: 10.46 },
+			{ label: "06.10.2019", y: 21.27 },
+			{ label: "07.10.2019", y: 3.99 },
+			{ label: "08.10.2019", y: 4.45 },
+			{ label: "09.10.2019", y: 2.92 },
+			{ label: "10.10.2019", y: 3.1 }
+		]
+	}]
+});
+chart.render();
+
+function toggleDataSeries(e) {
+	if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+		e.dataSeries.visible = false;
 	}
+	else {
+		e.dataSeries.visible = true;
+	}
+	chart.render();
+}
+
+}
 </script>
+
+
 </head>
 
-<body class="app" onload = "ucitajPodatkeKorisnika()">
+<body class="app">
     <div id="loader">
         <div class="spinner"></div>
     </div>
@@ -114,7 +147,7 @@
         });
     </script>
     <div>
-        <div class="sidebar">
+		<div class="sidebar">
             <div class="sidebar-inner">
                 <div class="sidebar-logo">
                     <div class="peers ai-c fxw-nw">
@@ -166,63 +199,22 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-            <main class="main-content bgc-grey-100">
+            </div> 
+			<main class="main-content bgc-grey-100" align="center">
                 <div id="mainContent">
-					<div class = "row">
-						<div class ="col-sm-2 mt-3">
-							&nbsp;
-						</div>
-						<div class ="col-sm-3 mt-3" align="center">
-							<button class = "btn btn-primary" onclick = "ucitajPodatkeKorisnika()">Korisnik</button>
-						</div>
-						<div class ="col-sm-2 mt-3">
-							&nbsp;
-						</div>
-						<div class ="col-sm-3 mt-3" align="center">
-							<button class = "btn btn-secondary" onclick = "ucitajPodatkeAI()">Vest. Inteligencija</button>
-						</div>
-						<div class ="col-sm-2 mt-3">
-							&nbsp;
-						</div>
-					</div>
-					<div class = "row">
-						<div class = "col-sm-2 mt-3 mr-0">&nbsp;</div>
-                        <div class="col-sm-8 mt-3 mr-0">
-							<div class="layers">
-                                        <div class="bgc-light-blue-500 c-white p-20 col-sm-12" align="center">
-                                            <div class="peers ai-c jc-sb gap-40">
-                                                <div class="peer peer-greed">
-                                                    <h5>Istorija</h5>
-                                                    <p class="mB-0" id = "naslov">Korisnicke akcije</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="table-responsive p-20">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th class="bdwT-0">Datum</th>
-                                                        <th class="bdwT-0">Komanda</th>
-                                                        <th class="bdwT-0">T. senzora 1</th>
-                                                        <th class="bdwT-0">T. senzora 2</th>
-														<th class="bdwT-0">V. senzora 1</th>
-                                                        <th class="bdwT-0">V. senzora 2</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody id = "tabela">
-                                                    
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-							</div>
-						
-						<div class = "col-sm-2 mt-3 mr-0">&nbsp;</div>
-					 
-					
+                    <div class="row mt-20 ml-20">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-6">
+                            <div class="bgc-white p-20 bd" align="center">
+                                <h6 class="c-grey-900">Senzori statistika</h6>
+                                <div class="mT-30">
+                                    <div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
+                                </div>
+                            </div>
+                        </div>
+						  <div class="col-sm-3"></div>
                     </div>
-				</div>
+                </div>
             </main>
             <footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600"><span>Copyright © 2018 Designed by SmartFarm. All rights reserved.</span>
             </footer>
@@ -232,4 +224,5 @@
     <script type="text/javascript" src="bundle.js"></script>
 	<script src="assets/static/js/canvasjs.min.js"></script>
 </body>
+
 </html>
